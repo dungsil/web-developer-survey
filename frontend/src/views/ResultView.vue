@@ -44,9 +44,13 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+// import { barChart } from '@toast-ui/vue-chart'
 import ResultHeader from '@/components/result/result-header.vue'
 import ResultCard from '@/components/result/result-card.vue'
 import ResultFooter from '@/components/result/result-footer.vue'
+
+// CSS
+import '@toast-ui/chart/dist/toastui-chart.min.css'
 
 
 // FIXME: 추후 대체
@@ -57,8 +61,11 @@ interface Chapter {
   description: string;
   data?: any
 }
+
 @Component({
   components: {
+    // barChart,
+
     ResultHeader,
     ResultCard,
     ResultFooter
@@ -156,6 +163,10 @@ export default class ResultView extends Vue {
 
   &__chapter {
     margin-top: 5rem;
+  }
+
+  &__charts {
+    margin-top: 4rem;
   }
 }
 </style>
